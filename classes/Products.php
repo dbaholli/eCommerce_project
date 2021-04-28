@@ -36,7 +36,7 @@ class Products {
     }
 
     public function create($data) {
-        $sql = "INSERT INTO `products` (`title`, `price`, `qty`, `iamges`)  VALUES ('".$data['title']."', '".$data['price']."', '".$data['qty']."', '".$data['images']."')";
+        $sql = "INSERT INTO `products` (`title`, `price`, `qty`, `images`)  VALUES ('".$data['title']."', '".$data['price']."', '".$data['qty']."', '".$data['images']."')";
         
         if($this->mysqli->query($sql))
             return true; 
