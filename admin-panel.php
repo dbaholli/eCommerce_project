@@ -34,7 +34,7 @@
             }
     
             foreach($_FILES['images']['tmp_name'] as $key => $tmp_name) {
-                move_uploaded_file($images[$key], "assets/img/products/".$tmp_name);
+                move_uploaded_file($tmp_name, "./assets/img/products/".$images[$key]);
             }
             if($p->create(['title' => $title, 'price' => $price, 'qty' => $qty, 'images' => json_encode($images)]))
                 header("Location: admin-panel.php");
